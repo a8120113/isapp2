@@ -10,6 +10,28 @@
 
     <script>
         osql.requireLogin();
+
+        $().ready(function () {
+            init();
+        });
+
+        function init() {
+            var name = sessionStorage.getItem("username");
+
+            document.getElementById("welcome").innerHTML = "ようこそ" + name + "さん";
+        }
+
+        function buttonPressed() {
+            var userid = sessionStorage.getItem("userid");
+            location.href = "update.html?userid=" + userid;
+
+        }
+
+        function buttonPressed2() {
+            var name = sessionStorage.getItem("userid");
+            location.href = "tweet.html?userid=" + name;
+        }
+
     </script>
 
 </head>
@@ -18,6 +40,7 @@
     <h1>ユーザトップ</h1>
     <p id="welcome">ようこそxxさん</p>
     <hr>
+    <p><a href="move.html">動画一覧</a></p>
 
 </body>
 
