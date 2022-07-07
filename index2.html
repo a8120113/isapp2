@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/osql.js"></script>
+
+
+    <script>
+        osql.requireLogin();
+
+        async function buttonPressed() {
+
+            var me = await osql.getMe();
+
+            console.log(me);
+
+            var sql = `insert ignore into Users values('${me.id}','${me.fname}','${me.lname}')`;
+            var objects = await osql.connect(sql);
+
+            sessionStorage.setItem('userid', me.id);
+            sessionStorage.setItem('username', me.lname + '' + me.fname);
+
+            location.href = 'usertop.html';
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>キングベル13世による　湘南ベルマーレ紹介</h1>
+    <div>
+        <!-- <div>
+            <h2>ログイン</h2>
+            userid:<input id="tf1" value="" type="textfield">
+            <br>
+            password:<input id="tf2" value="" type="password">
+            <br>
+
+        </div> -->
+        <button onclick="buttonPressed()">ログイン</button>
+    </div>
+    <hr>
+    <p><a href="register.html">新規登録</a></p>
+    <hr>
+</body>
+
+</html>
