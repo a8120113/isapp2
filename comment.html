@@ -35,7 +35,7 @@
 
         jQuery(document).ready(function () {
             doSelect();
-            document.getElementById('tf1').value = osql.getParam('name');
+            document.getElementById('tf1').value = sessionStorage.getItem('username');
         });
 
         jQuery(document).ready(function () {
@@ -51,7 +51,7 @@
             var userid = document.getElementById('tf1').value;
             var comment = document.getElementById('tf2').value;
 
-            var sql = `insert into Comments (time, name, comment) values("now() , ${userid}", "${tweet}");`;
+            var sql = `insert into Comments (time, name, comment) values("now() , "${userid}", "${comment}");`;
             var objects = await osql.connect(sql);
             console.log(objects);
 
@@ -85,7 +85,7 @@
     名前:<input id="tf1" value="" type="textfield">
     <br>
     tweet:<input id="tf2" type="textfield">
-    <button onclick="button1Pressed()">tweet</button>
+    <button onclick="button1Pressed()">コメントする</button>
     <br>
     <p id="result1"></p>
     <hr>
