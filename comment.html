@@ -8,7 +8,6 @@
     <script type="text/javascript" src="lib/jquery.min.js"></script>
     <script type="text/javascript" src="lib/osql.js"></script>
 
-
     <script>
         osql.requireLogin();
 
@@ -25,13 +24,25 @@
             var html = '';
             var object = objects[x - 1]
             html = html + '<table>';
-            html = html + '<tr> <td>' + object.title + '</td> </tr>';
             html = html + '<tr> <td>' + object.moveurl + '</td> </tr>';
+            html = html + '<tr> <td>' + '<h2>' + object.title + '</h2>' + '</td> </tr>';
             html = html + '</table>';
             document.getElementById('result').innerHTML = html;
         }
 
     </script>
+
+    <style type="text/css">
+        iframe {
+            width: 60vw;
+            height: 33.75vw;
+
+        }
+
+        h1 {
+            background-color: red;
+        }
+    </style>
 
 </head>
 
