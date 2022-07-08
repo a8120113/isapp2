@@ -51,7 +51,7 @@
             var userid = document.getElementById('tf1').value;
             var comment = document.getElementById('tf2').value;
 
-            var sql = `insert into Comments (time, name, comment) values(now() , "${userid}", "${comment}");`;
+            var sql = `insert into Comments2 (time, name, comment, id) values(now() , "${userid}", "${comment}", "${x}");`;
             var objects = await osql.connect(sql);
             console.log(objects);
 
@@ -60,7 +60,7 @@
         }
 
         async function doSelect() {
-            var sql = 'select * from Comments order by time desc';
+            var sql = 'select * from Comments2 where id =' + x + ' order by time desc';
             var objects = await osql.connect(sql);
             console.log(objects);
             var html = '';
