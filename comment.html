@@ -12,6 +12,25 @@
     <script>
         osql.requireLogin();
 
+        $().ready(function () {
+            showMovie();
+        });
+
+        var x = osql.getParam('id');
+
+        async function showMovie() {
+            var sql = 'select * from Moves';
+            var objects = await osql.connect(sql);
+            console.log(objects);
+            var html = '';
+            var object = objects[x - 1]
+            html = html + '<table>';
+            html = html + '<tr> <td>' + object.title + '</td> </tr>';
+            html = html + '<tr> <td>' + object.moveurl + '</td> </tr>';
+            html = html + '</table>';
+            document.getElementById('result').innerHTML = html;
+        }
+
     </script>
 
 </head>
