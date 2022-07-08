@@ -25,8 +25,8 @@
             var html = '';
             var object = objects[x - 1]
             html = html + '<table>';
-            html = html + '<tr> <td>' + object.moveurl + '</td> </tr>';
             html = html + '<tr> <td>' + '<h2>' + object.title + '</h2>' + '</td> </tr>';
+            html = html + '<tr> <td>' + object.moveurl + '</td> </tr>';
             html = html + '</table>';
             document.getElementById('result').innerHTML = html;
         }
@@ -84,16 +84,11 @@
             width: 60vw;
             height: 33.75vw;
         }
-
-        h1 {
-            background-color: red;
-        }
     </style>
 
 </head>
 
 <body>
-    <h1>コメントページ</h1>
     <p id="result">xxxx</p>
 
     <br>
