@@ -51,7 +51,7 @@
             var userid = document.getElementById('tf1').value;
             var comment = document.getElementById('tf2').value;
 
-            var sql = `insert into Comments (time, name, comment) values("now() , "${userid}", "${comment}");`;
+            var sql = `insert into Comments (time, name, comment) values(now() , "${userid}", "${comment}");`;
             var objects = await osql.connect(sql);
             console.log(objects);
 
