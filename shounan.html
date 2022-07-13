@@ -13,59 +13,145 @@
 
     </script>
 
+    <style type="text/css">
+        h2 {
+            padding: 1rem 2rem;
+            border-top: 6px double #000;
+            border-bottom: 6px double #000;
+            background: linear-gradient(hsl(151, 100%, 94%), white);
+        }
+
+        a {
+            opacity: 1;
+        }
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        hr {
+            border: none;
+            background-color: #f0fff6;
+            border-top: 2px dashed #117f33;
+        }
+
+        body {
+            padding: 30px 30px;
+            width: 80%;
+            margin: 8px auto;
+            text-align: center;
+        }
+
+        #pro {
+            background-color: #ddffbb;
+            padding: 30px 30px;
+            width: 80%;
+            margin: 8px auto;
+            border-radius: 24px;
+            text-align: center;
+        }
+
+        #profile {
+            background-color: #36aa5b;
+            border-radius: 24px;
+            padding: 10px;
+        }
+
+        #tabl {
+            margin: auto;
+        }
+
+        #ranking {
+
+            padding: 30px 30px;
+            width: 80%;
+            margin: 8px auto;
+        }
+
+        img {
+            width: 300px;
+            height: auto
+        }
+
+        #midashi {
+            background-color: #ccfc9c;
+        }
+    </style>
+
+
 </head>
 
 <body>
-    <h1>紹介ページ</h1>
     <h2>2022湘南ベルマーレ紹介</h2>
     <hr>
-    <h3>チームプロフィール</h3>
-    昨季は「試練」の1年だった。シーズン途中での監督交代など幾度となく難しい場面を迎えたものの、
-    その度に磨き上げたアグレッシブな「湘南スタイル」の原点に立ち返り、最終節で辛うじて残留を決めた。
-    山口智監督が続投して臨む今季は、瀬川祐輔や米本拓司などの実力者が加入した上、永木亮太が7季ぶりに帰還。
-    さらには「守護神」谷晃生の残留も決まり、戦力は整った。ベテランと若い力が融合し、「湘南旋風」を巻き起こせるか。
-    <table border="1">
+    <div id="pro">
+        <h3 id="profile">チームプロフィール</h3>
+
+        昨季は「試練」の1年だった。シーズン途中での監督交代など幾度となく難しい場面を迎えたものの、
+        その度に磨き上げたアグレッシブな「湘南スタイル」の原点に立ち返り、最終節で辛うじて残留を決めた。
+        山口智監督が続投して臨む今季は、瀬川祐輔や米本拓司などの実力者が加入した上、永木亮太が7季ぶりに帰還。
+        さらには「守護神」谷晃生の残留も決まり、戦力は整った。ベテランと若い力が融合し、「湘南旋風」を巻き起こせるか。
+
+    </div>
+
+    <table id="tabl" border="1">
         <tr>
-            <td>創立年</td>
+            <th id="midashi">創立年</th>
             <td>1968年</td>
         </tr>
         <tr>
-            <td>タイトル</td>
+            <th id="midashi">タイトル</th>
             <td>Jリーグカップ優勝1回(18年)
                 天皇杯優勝3回(77年・79年・94年)</td>
         </tr>
         <tr>
-            <td>ホームスタジアム</td>
+            <th id="midashi">ホームスタジアム</th>
             <td>レモンガススタジアム平塚</td>
         </tr>
     </table>
+
     <h3>直近5年間の成績</h3>
-    <table border="1">
+
+
+    <table id="tabl">
         <tr>
-            <th>年度</th>
-            <th>順位</th>
-        </tr>
-        <tr>
-            <td>2018 J1</td>
-            <td>13位</td>
-        </tr>
-        <tr>
-            <td>2019 J1</td>
-            <td>16位</td>
-        </tr>
-        <tr>
-            <td>2020 J1</td>
-            <td>18位</td>
-        </tr>
-        <tr>
-            <td>2021 J1</td>
-            <td>16位</td>
-        </tr>
-        <tr>
-            <td><a href="movie.html">2022</a> J1</td>
-            <td>?</td>
+            <td>
+                <img src="円陣.jpeg" width="300px" height="auto" alt="円陣">
+            </td>
+            <td>
+                <p>&emsp;</p>
+            </td>
+            <td>
+                <table id="rank" border="1">
+                    <tr>
+                        <th id="midashi">年度</th>
+                        <th id="midashi">順位</th>
+                    </tr>
+                    <tr>
+                        <td>2018 J1</td>
+                        <td>13位</td>
+                    </tr>
+                    <tr>
+                        <td>2019 J1</td>
+                        <td>16位</td>
+                    </tr>
+                    <tr>
+                        <td>2020 J1</td>
+                        <td>18位</td>
+                    </tr>
+                    <tr>
+                        <td>2021 J1</td>
+                        <td>16位</td>
+                    </tr>
+                    <tr>
+                        <td><a href="movie.html">2022</a> J1</td>
+                        <td>?</td>
+                    </tr>
+                </table>
+            </td>
         </tr>
     </table>
+
     <hr>
     <p style="text-align: right"><a href="admintop.html">管理者ページ</a></p>
 </body>
