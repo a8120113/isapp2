@@ -7,6 +7,7 @@
 
     <script type="text/javascript" src="lib/jquery.min.js"></script>
     <script type="text/javascript" src="lib/osql.js"></script>
+    <link rel="stylesheet" href="page.css">
 
 
     <script>
@@ -64,7 +65,7 @@
             var objects = await osql.connect(sql);
             console.log(objects);
             var html = '';
-            html = html + '<ul>';
+            html = html + '<ul style="list-style: none;">';
             for (var i = 0; i < objects.length; i++) {
                 var object = objects[i];
                 html = html + '<li>' + object.time + ' ' + object.name + ' ' + object.comment + '</li>';
@@ -76,10 +77,6 @@
     </script>
 
     <style type="text/css">
-        tbody {
-            text-align: center;
-        }
-
         iframe {
             width: 60vw;
             height: 33.75vw;
@@ -91,10 +88,9 @@
 <body>
     <p id="result">xxxx</p>
 
-    <br>
-    名前:<input id="tf1" value="" type="textfield">
-    <br>
-    tweet:<input id="tf2" type="textfield">
+
+    <p>名前:<input id="tf1" value="" type="textfield"></p>
+    <p>コメント:<textarea id="tf2"></textarea></p>
     <button onclick="button1Pressed()">コメントする</button>
     <br>
     <p id="result1"></p>
